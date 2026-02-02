@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT VOICE เบอร์ 3 | พรรคสภานักเรียน</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Kanit', sans-serif; background-color: #000; color: white; scroll-behavior: smooth; overflow-x: hidden; }
+        .bg-gradient-red { background: linear-gradient(135deg, #000000 0%, #450a0a 50%, #991b1b 100%); }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .card-hover:hover { transform: translateY(-5px); border-color: #ef4444; box-shadow: 0 10px 30px -10px rgba(239, 68, 68, 0.5); }
+        .number-3-glow { text-shadow: 0 0 30px rgba(239, 68, 68, 0.9); }
+        .modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.9); backdrop-filter: blur(5px); }
+        .modal-content { background: linear-gradient(145deg, #1a1a1a, #000); margin: 5% auto; padding: 40px; border: 1px solid #444; width: 90%; max-width: 800px; border-radius: 30px; position: relative; max-height: 85vh; overflow-y: auto; }
+        .close { position: absolute; right: 25px; top: 20px; color: #aaa; font-size: 28px; font-weight: bold; cursor: pointer; }
+        .close:hover { color: #ff0000; }
+        .member-img-placeholder { width: 100px; height: 100px; border-radius: 50%; background: #222; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; border: 2px solid #ef4444; overflow: hidden; }
+        .member-img-placeholder img { width: 100%; height: 100%; object-fit: cover; }
+        input, textarea, select { background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(255,255,255,0.1) !important; color: white !important; }
+        input:focus, textarea:focus, select:focus { border-color: #ef4444 !important; outline: none; box-shadow: 0 0 10px rgba(239, 68, 68, 0.2); }
+        option { background: #1a1a1a; color: white; }
+    </style>
+</head>
+<body class="bg-gradient-red min-h-screen">
+
+    <nav class="fixed w-full z-50 top-0 glass py-4 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-800 tracking-tighter text-red-600">STUDENT <span class="text-white">VOICE</span> <span class="ml-2 bg-red-600 text-white px-2 py-0.5 rounded text-sm font-bold">NO.3</span></div>
+            <ul class="hidden md:flex space-x-8 text-sm uppercase tracking-widest font-semibold">
+                <li><a href="#home" class="hover:text-red-500 transition">หน้าหลัก</a></li>
+                <li><a href="#policies" class="hover:text-red-500 transition">นโยบาย</a></li>
+                <li><a href="#members" class="hover:text-red-500 transition">สมาชิก</a></li>
+                <li><a href="#survey" class="hover:text-red-500 transition">แจ้งปัญหา</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="home" class="pt-48 pb-20 px-6 text-center">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-9xl font-800 text-red-600 mb-2 number-3-glow animate-pulse">3</div>
+            <h1 class="text-5xl md:text-7xl font-800 mb-4 uppercase tracking-tighter tracking-widest">Welcome to <br><span class="text-white">STUDENT VOICE</span></h1>
+            <p class="text-red-500 text-xl md:text-2xl font-semibold mb-10 tracking-wide bg-white/5 inline-block px-6 py-2 rounded-full">"รับฟังทุกเสียง พร้อมเคียงข้างทุกคน"</p>
+            
+            <div class="flex justify-center gap-8 mb-12">
+                <a href="https://www.instagram.com/pakstudentsvoice.council_?igsh=OHF1NjJxeDVuYzI1" target="_blank" class="flex flex-col items-center group">
+                    <div class="w-16 h-16 glass rounded-2xl flex items-center justify-center text-3xl group-hover:bg-red-600 transition duration-300">
+                        <i class="fa-brands fa-instagram text-white"></i>
+                    </div>
+                    <span class="text-xs mt-2 text-gray-400 font-light">Instagram</span>
+                </a>
+                <a href="https://www.tiktok.com/@pakstudentsvoice?_r=1&_t=ZS-93aAuogos5q" target="_blank" class="flex flex-col items-center group">
+                    <div class="w-16 h-16 glass rounded-2xl flex items-center justify-center text-3xl group-hover:bg-red-600 transition duration-300">
+                        <i class="fa-brands fa-tiktok text-white"></i>
+                    </div>
+                    <span class="text-xs mt-2 text-gray-400 font-light">TikTok</span>
+                </a>
+            </div>
+            <a href="#policies" class="inline-block bg-red-600 text-white px-10 py-4 rounded-full font-bold hover:bg-red-700 transition uppercase tracking-widest">อ่านนโยบายพรรค</a>
+        </div>
+    </section>
+
+    <section id="policies" class="py-24 px-6 bg-black/40">
+        <div class="max-w-7xl mx-auto text-center mb-16">
+            <h2 class="text-4xl font-800 uppercase tracking-widest">นโยบายพรรค</h2>
+            <div class="w-24 h-1 bg-red-600 mx-auto mt-4"></div>
+        </div>
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="policy-list"></div>
+    </section>
+
+    <section id="members" class="py-24 px-6">
+        <div class="max-w-6xl mx-auto text-center mb-16">
+            <h2 class="text-4xl font-800 mb-4 uppercase tracking-widest text-white">คณะผู้บริหารและโครงสร้างพรรค</h2>
+            <div class="w-24 h-1 bg-red-600 mx-auto rounded-full"></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto mb-12 text-center">
+            <div class="glass p-8 rounded-[2.5rem] border-2 border-red-600 inline-block w-full max-w-sm card-hover transition-all">
+                <div class="member-img-placeholder" style="width: 150px; height: 150px;">
+                    <img src="https://i.postimg.cc/hPW6nnK2/1000007900-removebg-preview.png" alt="นายปิยะพัฒน์ เมืองนาง">
+                </div>
+                <h3 class="text-xl font-800">นายปิยะพัฒน์ เมืองนาง</h3>
+                <p class="text-red-500 font-bold uppercase tracking-widest text-xs mt-1">ประธาน</p>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+            <div class="glass p-6 rounded-[2rem] border border-red-500/50 text-center card-hover transition-all">
+                <div class="member-img-placeholder">
+                    <img src="https://i.postimg.cc/TP4N4Mk7/1000007901-removebg-preview.png" alt="นายธนกร ทิพย์เนตร">
+                </div>
+                <h3 class="text-lg font-800">นายธนกร ทิพย์เนตร</h3>
+                <p class="text-red-500 font-bold text-xs">รองประธานคนที่ 1</p>
+            </div>
+            <div class="glass p-6 rounded-[2rem] border border-white/20 text-center card-hover transition-all">
+                <div class="member-img-placeholder" style="border-color: #ffffff;">
+                    <img src="https://i.postimg.cc/SxQZQN3c/1000007906-removebg-preview.png" alt="นางสาวฉัตรตราภรณ์ ทุมวรรณ">
+                </div>
+                <h3 class="text-lg font-800">นางสาวฉัตรตราภรณ์ ทุมวรรณ</h3>
+                <p class="text-gray-400 font-bold text-xs uppercase">เลขานุการ</p>
+            </div>
+            <div class="glass p-6 rounded-[2rem] border border-red-500/50 text-center card-hover transition-all">
+                <div class="member-img-placeholder">
+                    <img src="https://i.postimg.cc/cCQDCKdh/1000007902-removebg-preview.png" alt="นางสาวสิริวิมล เวฬวนารักษ์">
+                </div>
+                <h3 class="text-lg font-800">นางสาวสิริวิมล เวฬวนารักษ์</h3>
+                <p class="text-red-500 font-bold text-xs">รองประธานคนที่ 2</p>
+            </div>
+        </div>
+
+        <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-20" id="dept-grid"></div>
+    </section>
+
+    <section id="survey" class="py-24 px-6 bg-black/40">
+        <div class="max-w-4xl mx-auto glass p-10 rounded-[3rem] border-2 border-red-600/30">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-800 uppercase tracking-widest text-white">แจ้งปัญหา & เสนอแนะ</h2>
+                <p class="text-red-500 mt-2">เสียงของทุกคนส่งตรงถึงประธานพรรค (Piyaphat.mueangnang17@gmail.com)</p>
+            </div>
+            <form action="https://formspree.io/f/mqakppon" method="POST" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">ชื่อ-นามสกุล (ไม่ระบุก็ได้)</label>
+                        <input type="text" name="name" class="w-full p-4 rounded-2xl glass border-none focus:ring-2 focus:ring-red-600" placeholder="ชื่อของคุณ">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">ระดับชั้น</label>
+                        <input type="text" name="grade" class="w-full p-4 rounded-2xl glass border-none" placeholder="เช่น ม.4/1">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">หัวข้อที่ต้องการแจ้ง</label>
+                    <select name="subject" class="w-full p-4 rounded-2xl glass border-none text-gray-400 focus:text-white">
+                        <option value="แจ้งปัญหา">แจ้งปัญหาภายในโรงเรียน</option>
+                        <option value="เสนอแนะ">เสนอแนะนโยบายใหม่</option>
+                        <option value="ชื่นชม">ชื่นชม/ให้กำลังใจสภา</option>
+                        <option value="อื่นๆ">อื่นๆ</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase tracking-widest text-gray-400 mb-2">รายละเอียด</label>
+                    <textarea name="message" rows="4" class="w-full p-4 rounded-2xl glass border-none" required placeholder="พิมพ์ข้อความของคุณที่นี่..."></textarea>
+                </div>
+                <input type="hidden" name="_replyto" value="Piyaphat.mueangnang17@gmail.com">
+                <button type="submit" class="w-full bg-red-600 text-white font-800 py-4 rounded-2xl hover:bg-red-700 transition-all uppercase tracking-widest shadow-lg shadow-red-600/20">ส่งข้อมูลถึงพรรคเบอร์ 3</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="py-10 text-center text-gray-600 text-xs tracking-widest uppercase">
+        &copy; 2026 Student Voice Party No.3. All rights reserved.
+    </footer>
+
+    <div id="memberModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body" class="text-center"></div>
+        </div>
+    </div>
+
+    <script>
+        const policies = [
+            "1. ผลักดันชมรมใหม่ตามความสนใจของนักเรียน", "2. ปรับพื้นที่ว่างให้ใช้ประโยชน์ เช่น พื้นที่อ่านหนังสือ",
+            "3. ส่งเสริมการจัดกิจกรรมทักษะวิชาการ ทักษะอาชีพที่หลากหลาย", "4. ส่งเสริมให้เกิดการเรียนรู้นอกห้องที่หลากหลาย",
+            "5. เพิ่มจำนวนนักเรียนจิตอาสาช่วยกันพัฒนาโรงเรียน", "6. สนับสนุนให้นักเรียนกล้าแสดงออก เช่น COVER DANCE",
+            "7. กิจกรรม OPEN HOUSES แนะนำสายการเรียนต่าง ๆ", "8. จัดกิจกรรมฝึกงาน ฝึกประสบการณ์สำหรับ ม.ปลาย",
+            "9. ชี้แนะแนวทางการศึกษาต่อในระดับมหาวิทยาลัย", "10. ประกาศข่าวสารทุนการศึกษาต่าง ๆ ให้เข้าถึงง่าย",
+            "11. สนับสนุนชมรมหลีดมือประจำโรงเรียน", "12. สนับสนุนชมรม COVER DANCE",
+            "13. สร้างเพจ IG แชร์ความรู้และแนวทางข้อสอบ", "14. จัดการแข่งขันรายการต่าง ๆ ทั้งในและนอก",
+            "15. โครงการขยะเป็นเงิน หรือ แลกของใช้", "16. ส่งเสริมเพศทางเลือก ประกวด MISS LGBTQ+",
+            "17. พัฒนาห้องน้ำสะอาด มีราวจับและผ้าอนามัยสำรอง", "18. โครงการยืมร่มกับสภาในช่วงหน้าฝน",
+            "19. ระบบของหายได้คืน", "20. ตลาดนัดพอเพียง",
+            "21. สานต่อบัวพิทย์คัพ เพิ่มชนิดกีฬา", "22. E-Sports ออนทัวร์ จัดการแข่งขัน",
+            "23. สานสัมพันธ์พี่น้องหนองบัวพิทย์", "24. สานต่อนโยบายรุ่นพี่สภา"
+        ];
+
+        const depts = [
+            {
+                name: "สภาวิชาการ", icon: "fa-book-open", head: "นางสาวชนาพร จักรนามน", 
+                head_img: "https://i.postimg.cc/T3v2LBfp/1000007881-removebg-preview.png",
+                members: [{n: "นางสาวจารุวรรณ เฉลิมสิงห์"}, {n: "นางสาวชรินรัตน์ ลุนอุบล", img: "https://i.postimg.cc/wMfpWbsF/1000007898-removebg-preview.png"}, {n: "นางสาวกมลพร กรมไทสงค์"}, {n: "นางสาววณิชพร ปุ้ยุ้ย"}, {n: "นางสาวพิไลวรรณ กองสำลี"}, {n: "นางสาวบุษราคัมย์ มลศิลป์"}]
+            },
+            {
+                name: "สภาสารวัตร", icon: "fa-user-shield", head: "นายธีรพัฒน์ ศรีหานนท์", head_img: "",
+                members: [{n: "นายพชร บุญยานาม"}, {n: "นางสาววิจิตรา บัวระพา"}, {n: "นายธนวิทย์ กลับศรี"}, {n: "นายอาณาจักร นวลสำลี"}, {n: "นายขวัญชัย ดารา"}, {n: "นายอัศนัย กันหา"}, {n: "นายศุภกร หมื่นเดช"}]
+            },
+            {
+                name: "สภาประชาสัมพันธ์", icon: "fa-bullhorn", head: "นางสาวรุจิรา เหลื่อมนอก", 
+                head_img: "https://i.postimg.cc/DyLnT5st/1000007878-removebg-preview.png",
+                members: [{n: "นางสาวอินทิรา พลหล"}, {n: "นางสาวกิตติปัญญา หอมหวล"}, {n: "นางสาวกรรณิการ์ คำมณีจันทร์", img: "https://i.postimg.cc/Gt0Y4q2b/1000007890-removebg-preview.png"}, {n: "นางสาวภัทราพร สิมารักษ์"}, {n: "นางสาวพิยดา แก้วภูเม็ง"}, {n: "นายสัตยา แสนภักดี"}, {n: "นางสาวกุลสตรี จันทร์หวังทอง"}]
+            },
+            {
+                name: "สภาโสตทัศน์", icon: "fa-camera-retro", head: "นางสาววิไลลักษณ์ ถุงแก้ว", head_img: "",
+                members: [
+                    {n: "นายธีรศิลป์ คัณทักษ์", img: "https://i.postimg.cc/HsyXCG6H/1000002246-removebg-preview.png"}, 
+                    {n: "นางสาวสุดารัตน์ ลวดอุปโป"}, {n: "นางสาวดวงพร เคนตานนท์"}, {n: "นางสาวปนัดดา บุตรแก้ว"}, {n: "นางสาวศิริพร หีบแก้ว"}, {n: "นางสาวปวริศา โคตรภักดี"}, {n: "นางสาววริษฐา จารัตน์"}
+                ]
+            },
+            {
+                name: "สภาบริหารทั่วไป", icon: "fa-gears", head: "นางสาวคณาทรัพย์ โพชะ", head_img: "",
+                members: [{n: "นางสาวภาวินี ชารี"}, {n: "นางสาวปภัสรา โพธิ์พินิจ"}, {n: "นางสาวณิชาภรณ์ ศรีสุทธะ"}, {n: "นางสาวเบญญาภา ท้าวพา"}, {n: "นางสาวสุดารัตน์ บูทอง"}]
+            },
+            {
+                name: "สภากิจกรรม", icon: "fa-star", head: "นายอภิวัฒน์ ชินมาตร์", 
+                head_img: "https://i.postimg.cc/vB5TNMQt/1000007894-removebg-preview.png",
+                members: [
+                    {n: "นายธนากร ศรีสะอาด"}, {n: "นางสาวณัฐพัชร์ เลิศศิลป์ชาญชัย", img: "https://i.postimg.cc/GmNp399R/1000007896-removebg-preview.png"}, 
+                    {n: "นางสาวพิชญาภา ศรีทอนสุด", img: "https://i.postimg.cc/5Ng1yy7P/1000007887-removebg-preview.png"}, 
+                    {n: "นางสาวชลธิชา วันดา"}, {n: "นางสาวดวงจันทร์ บุญประคม"}, {n: "นางสาวบุปผาสิริ พรประเสริฐรักษา"}, 
+                    {n: "นางสาวชัญญานุช เพชรหงษ์"}, 
+                    {n: "นางสาวภัทรานิษย์ ชาวกล้า", img: "https://i.postimg.cc/ZRW0F3gR/1000007883-removebg-preview.png"}
+                ]
+            },
+            {
+                name: "สภาอาคาร/สถานที่", icon: "fa-building", head: "นางสาวณัฐชยาภรณ์ ชารีแสง", head_img: "",
+                members: [{n: "นางสาวปวรินทร์ ทุมวัน"}, {n: "นางสาวรุ่งฤดี เวทไธสง"}, {n: "นายภัทรศกร อุดมกอง"}, {n: "นายทินกร กุลาสา"}, {n: "นางสาวอริสา แก้วเคล็ดคำ"}, {n: "นางสาวญานิศา มอบโคตร"}]
+            },
+            {
+                name: "สภาปฏิคม", icon: "fa-handshake", head: "นางสาวสุนันทา พลยุทธ", 
+                head_img: "https://i.postimg.cc/Hs9WMBxy/1000007885-removebg-preview.png",
+                members: [{n: "นางสาวนันทพร ทวงษ์ศรี"}, {n: "นางสาวจีรชญา สุโพธิ์"}, {n: "นางสาวฟิณณิตา ทศชา"}, {n: "นางสาวนารีรัตน์ รักษาภักดี"}, {n: "นางสาวทอฝัน สุขรักษา"}, {n: "นางสาวอารยา ศรีจันทร์", img: "https://i.postimg.cc/8cVJpcyq/1000007892-removebg-preview.png"}]
+            },
+            {
+                name: "สภาเหรัญญิก", icon: "fa-wallet", head: "นางสาวธัญลักษณ์ อินพิมพ์", head_img: "",
+                members: [{n: "นางสาวกนกพร สิงห์ชัย"}, {n: "นางสาวอารีรัตน์ แสนหล้า"}, {n: "นางสาวจตุพร จันทะเทพ"}, {n: "นางสาวไอยดา วงษ์ศรีแก้ว"}, {n: "นางสาวสุจิตรา มีกุล"}]
+            }
+        ];
+
+        // Render Policies
+        const policyContainer = document.getElementById('policy-list');
+        policies.forEach(p => {
+            policyContainer.innerHTML += `<div class="glass p-6 rounded-2xl card-hover transition-all text-left border-l-4 border-transparent hover:border-red-600"><p class="text-gray-300 font-light group-hover:text-white">${p}</p></div>`;
+        });
+
+        // Render Depts
+        const deptGrid = document.getElementById('dept-grid');
+        depts.forEach((dept, index) => {
+            deptGrid.innerHTML += `<div class="glass p-8 rounded-3xl border-b-4 border-red-600 hover:bg-red-600/10 transition-all text-center group cursor-pointer" onclick="openModal(${index})"><i class="fa-solid ${dept.icon} text-3xl text-red-500 mb-4 group-hover:scale-110 transition-transform"></i><h3 class="text-lg font-bold">${dept.name}</h3><p class="text-xs text-gray-400 mt-2 italic">ดูรายชื่อสมาชิกฝ่าย</p></div>`;
+        });
+
+        const modal = document.getElementById("memberModal");
+        const span = document.getElementsByClassName("close")[0];
+
+        function openModal(index) {
+            const dept = depts[index];
+            const modalBody = document.getElementById("modal-body");
+            const headPhoto = dept.head_img ? `<img src="${dept.head_img}">` : `<i class="fa-solid fa-user-tie text-3xl text-gray-500"></i>`;
+            
+            modalBody.innerHTML = `
+                <h2 class="text-3xl font-800 text-red-600 mb-2">${dept.name}</h2>
+                <div class="w-16 h-1 bg-white mx-auto mb-8"></div>
+                <div class="mb-10">
+                    <p class="text-red-500 uppercase tracking-widest text-[10px] font-bold mb-4">หัวหน้าฝ่าย</p>
+                    <div class="inline-block glass p-5 rounded-3xl border border-red-600">
+                        <div class="member-img-placeholder" style="width: 80px; height: 80px;">${headPhoto}</div>
+                        <p class="font-800 text-lg">${dept.head}</p>
+                    </div>
+                </div>
+                <p class="text-gray-500 uppercase tracking-widest text-[10px] font-bold mb-6">สมาชิกในฝ่าย</p>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
+                    ${dept.members.map(m => `
+                        <div class="text-center">
+                            <div class="member-img-placeholder w-12 h-12 mb-2 border-gray-600">
+                                ${m.img ? `<img src="${m.img}">` : `<i class="fa-solid fa-user text-xl text-gray-600"></i>`}
+                            </div>
+                            <p class="text-xs font-light">${m.n}</p>
+                        </div>
+                    `).join('')}
+                </div>
+            `;
+            modal.style.display = "block";
+        }
+
+        span.onclick = () => modal.style.display = "none";
+        window.onclick = (e) => { if (e.target == modal) modal.style.display = "none"; }
+    </script>
+</body>
+</html>
