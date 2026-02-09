@@ -19,9 +19,7 @@
         .close:hover { color: #ff0000; }
         .member-img-placeholder { width: 100px; height: 100px; border-radius: 50%; background: #222; display: flex; align-items: center; justify-content: center; margin: 0 auto 15px; border: 2px solid #ef4444; overflow: hidden; }
         .member-img-placeholder img { width: 100%; height: 100%; object-fit: cover; }
-        input, textarea, select { background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(255,255,255,0.1) !important; color: white !important; }
-        input:focus, textarea:focus, select:focus { border-color: #ef4444 !important; outline: none; box-shadow: 0 0 10px rgba(239, 68, 68, 0.2); }
-        option { background: #1a1a1a; color: white; }
+        input, textarea { background: rgba(255,255,255,0.05) !important; border: 1px solid rgba(255,255,255,0.1) !important; color: white !important; }
     </style>
 </head>
 <body class="bg-gradient-red min-h-screen">
@@ -62,7 +60,7 @@
 
     <section id="policies" class="py-24 px-6 bg-black/40">
         <div class="max-w-7xl mx-auto text-center mb-16">
-            <h2 class="text-4xl font-800 uppercase tracking-widest">นโยบายพรรค</h2>
+            <h2 class="text-4xl font-800 uppercase tracking-widest text-white">นโยบายพรรค</h2>
             <div class="w-24 h-1 bg-red-600 mx-auto mt-4"></div>
         </div>
         <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4" id="policy-list"></div>
@@ -118,16 +116,10 @@
             </div>
             <form action="https://formspree.io/f/mqakppon" method="POST" class="space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <input type="text" name="name" class="w-full p-4 rounded-2xl glass border-none" placeholder="ชื่อของคุณ">
-                    </div>
-                    <div>
-                        <input type="text" name="grade" class="w-full p-4 rounded-2xl glass border-none" placeholder="ระดับชั้น">
-                    </div>
+                    <input type="text" name="name" class="w-full p-4 rounded-2xl glass border-none" placeholder="ชื่อของคุณ">
+                    <input type="text" name="grade" class="w-full p-4 rounded-2xl glass border-none" placeholder="ระดับชั้น">
                 </div>
-                <div>
-                    <textarea name="message" rows="4" class="w-full p-4 rounded-2xl glass border-none" required placeholder="พิมพ์ข้อความของคุณที่นี่..."></textarea>
-                </div>
+                <textarea name="message" rows="4" class="w-full p-4 rounded-2xl glass border-none" required placeholder="พิมพ์ข้อความของคุณที่นี่..."></textarea>
                 <button type="submit" class="w-full bg-red-600 text-white font-800 py-4 rounded-2xl hover:bg-red-700 transition-all uppercase tracking-widest">ส่งข้อมูลถึงพรรคเบอร์ 3</button>
             </form>
         </div>
@@ -169,45 +161,49 @@
             {
                 name: "สภาสารวัตร", icon: "fa-user-shield", head: "นายธีรพัฒน์ ศรีหานนท์", 
                 head_img: "https://i.postimg.cc/2S5n9PSC/mi-m-ch-x-338-20260209003108.png",
-                members: [{n: "นายพชร บุญยานาม"}, {n: "นางสาววิจิตรา บัวระพา"}, {n: "นายธนวิทย์ กลับศรี"}, {n: "นายอาณาจักร นวลสำลี"}, {n: "นายขวัญชัย ดารา"}, {n: "นายอัศนัย กันหา"}, {n: "นายศุภกร หมื่นเดช"}]
+                members: [
+                    {n: "นายพชร บุญยานาม"}, {n: "นางสาววิจิตรา บัวระพา"}, {n: "นายธนวิทย์ กลับศรี"}, {n: "นายอาณาจักร นวลสำลี"}, {n: "นายขวัญชัย ดารา"}, 
+                    // อัปเดตรูป: นายอัศนัย กันหา
+                    {n: "นายอัศนัย กันหา", img: "https://i.postimg.cc/90df0cPn/mi-m-ch-x-338-20260209195036.png"}, 
+                    {n: "นายศุภกร หมื่นเดช"}
+                ]
             },
             {
                 name: "สภาประชาสัมพันธ์", icon: "fa-bullhorn", head: "นางสาวรุจิรา เหลื่อมนอก", 
                 head_img: "https://i.postimg.cc/V6XXRfqz/mi-m-ch-x-338-20260203131049.png",
-                members: [{n: "นางสาวอินทิรา พลหล", img: "https://i.postimg.cc/YCqyd8P9/mi-m-ch-x-338-20260209182818.png"}, {n: "นางสาวกิตติปัญญา หอมหวล"}, {n: "นางสาวกรรณิการ์ คำมณีจันทร์", img: "https://i.postimg.cc/KYzQL1M7/mi-m-ch-x-338-20260209002745.png"}, {n: "นางสาวภัทราพร สิมารักษ์", img: "https://i.postimg.cc/htF7g8ND/mi-m-ch-x-338-20260209005445.png"}, {n: "นางสาวพิยดา แก้วภูเม็ง"}, {n: "นายสัตยา แสนภักดี"}, {n: "นางสาวกุลสตรี จันทร์หวังทอง"}]
+                members: [{n: "นางสาวอินทิรา พลหลง", img: "https://i.postimg.cc/YCqyd8P9/mi-m-ch-x-338-20260209182818.png"}, {n: "นางสาวกิตติปัญญา หอมหวล"}, {n: "นางสาวกรรณิการ์ คำมณีจันทร์", img: "https://i.postimg.cc/KYzQL1M7/mi-m-ch-x-338-20260209002745.png"}, {n: "นางสาวภัทราพร สิมารักษ์", img: "https://i.postimg.cc/htF7g8ND/mi-m-ch-x-338-20260209005445.png"}, {n: "นางสาวพิยดา แก้วภูเม็ง"}, {n: "นายสัตยา แสนภักดี"}, {n: "นางสาวกุลสตรี จันทร์หวังทอง"}]
             },
             {
                 name: "สภาโสตทัศน์", icon: "fa-camera-retro", head: "นางสาววิไลลักษณ์ ถุงแก้ว", 
                 head_img: "https://i.postimg.cc/MHNfn1TD/mi-m-ch-x-338-20260209004243.png",
-                members: [
-                    {n: "นายธีรศิลป์ คัณทักษ์", img: "https://i.postimg.cc/HsyXCG6H/1000002246-removebg-preview.png"}, 
-                    {n: "นางสาวจิณณพัต อาจจันดา", img: "https://i.postimg.cc/668WmLkJ/mi-m-ch-x-338-20260209082940.png"},
-                    {n: "นางสาวสุดารัตน์ ลวดอุปโป"}, {n: "นางสาวดวงพร เคนตานนท์"}, {n: "นางสาวปนัดดา บุตรแก้ว"}, {n: "นางสาวศิริพร หีบแก้ว"}, {n: "นางสาวปวริศา โคตรภักดี"}, {n: "นางสาววริษฐา จารัตน์"}
-                ]
+                members: [{n: "นายธีรศิลป์ คัณทักษ์", img: "https://i.postimg.cc/HsyXCG6H/1000002246-removebg-preview.png"}, {n: "นางสาวจิณณพัต อาจจันดา", img: "https://i.postimg.cc/668WmLkJ/mi-m-ch-x-338-20260209082940.png"}, {n: "นางสาวสุดารัตน์ ลวดอุปโป"}, {n: "นางสาวดวงพร เคนตานนท์"}, {n: "นางสาวปนัดดา บุตรแก้ว"}, {n: "นางสาวศิริพร หีบแก้ว"}, {n: "นางสาวปวริศา โคตรภักดี"}, {n: "นางสาววริษฐา จารัตน์"}]
             },
             {
-                name: "สภาบริหารทั่วไป", icon: "fa-gears", head: "นางสาวคณาทรัพย์ โพชะ", head_img: "",
-                members: [{n: "นางสาวภาวินี ชารี"}, {n: "นางสาวปภัสรา โพธิ์พินิจ"}, {n: "นางสาวณิชาภรณ์ ศรีสุทธะ"}, {n: "นางสาวเบญญาภา ท้าวพา"}, {n: "นางสาวสุดารัตน์ บูทอง"}]
+                name: "สภาบริหารทั่วไป", icon: "fa-gears", head: "นางสาวคณาทรัพย์ โพชะ", 
+                head_img: "https://i.postimg.cc/J7PtBzjJ/mi-m-ch-x-338-20260209193225.png",
+                members: [{n: "นางสาวภาวินี ชารี"}, {n: "นางสาวปภัสรา โพธิ์พินิจ"}, {n: "นางสาวณิชาภรณ์ ศีสุทธะ"}, {n: "นางสาวเบญญาภา ท้าวพา"}, {n: "นางสาวสุดารัตน์ บูทอง"}]
             },
             {
                 name: "สภากิจกรรม", icon: "fa-star", head: "นายอภิวัฒน์ ชินมาตร์", 
                 head_img: "https://i.postimg.cc/qq5TKWZP/mi-m-ch-x-338-20260205083046.png",
                 members: [
-                    {n: "นายธนากร ศรีสะอาด"}, {n: "นางสาวณัฐพัชร์ เลิศศิลป์ชาญชัย", img: "https://i.postimg.cc/GmNp399R/1000007896-removebg-preview.png"}, 
+                    {n: "นายธนากร ศีสะอาด"}, {n: "นางสาวณัฐพัชร์ เลิศศิลป์ชาญชัย", img: "https://i.postimg.cc/GmNp399R/1000007896-removebg-preview.png"}, 
                     {n: "นางสาวพิชญาภา ศรีทอนสุด", img: "https://i.postimg.cc/0QhnJf07/mi-m-ch-x-338-20260205081552.png"}, 
                     {n: "นางสาวชลธิชา วันดา"}, {n: "นางสาวดวงจันทร์ บุญประคม"}, {n: "นางสาวบุปผาสิริ พรประเสริฐรักษา"}, 
-                    {n: "นางสาวชัญญานุช เพชรหงษ์"}, 
+                    // อัปเดตรูป: นางสาวชัญญานุช เพชรหงษ์
+                    {n: "นางสาวชัญญานุช เพชรหงษ์", img: "https://i.postimg.cc/g0x3gBPJ/mi-m-ch-x-338-20260209200114.png"}, 
                     {n: "นางสาวภัทรานิษย์ ชาวกล้า", img: "https://i.postimg.cc/ZRW0F3gR/1000007883-removebg-preview.png"}
                 ]
             },
             {
-                name: "สภาอาคาร/สถานที่", icon: "fa-building", head: "นางสาวณัฐชยาภรณ์ ชารีแสง", head_img: "",
+                name: "สภาอาคาร/สถานที่", icon: "fa-building", head: "นางสาวณัฐชยาภรณ์ ชารีแสง", 
+                head_img: "https://i.postimg.cc/jjHSqxs8/mi-m-ch-x-338-20260209193511.png",
                 members: [{n: "นางสาวปภาวรินท์ ทุมวัน", img: "https://i.postimg.cc/BnGV2453/mi-m-ch-x-338-20260209005709.png"}, {n: "นางสาวรุ่งฤดี เวทไธสง", img: "https://i.postimg.cc/9FyxmK6J/mi-m-ch-x-338-20260209010419.png"}, {n: "นายภัทรศกร อุดมกอง"}, {n: "นายทินกร กุลาสา"}, {n: "นางสาวอริสา แก้วเคล็ดคำ"}, {n: "นางสาวญานิศา มอบโคตร"}]
             },
             {
                 name: "สภาปฏิคม", icon: "fa-handshake", head: "นางสาวสุนันทา พลยุทธ", 
                 head_img: "https://i.postimg.cc/wBHkXMND/mi-m-ch-x-338-20260205080736.png",
-                members: [{n: "นางสาวนันทพร ทวงษ์ศรี", img: "https://i.postimg.cc/XYL6JpRm/mi-m-ch-x-338-20260209083258.png"}, {n: "นางสาวจีรชญา สุโพธิ์"}, {n: "นางสาวฟิณณิตา ทศชา"}, {n: "นางสาวนารีรัตน์ รักษาภักดี"}, {n: "นางสาวทอฝัน สุขรักษา"}, {n: "นางสาวอารยา ศรีจันทร์", img: "https://i.postimg.cc/8cVJpcyq/1000007892-removebg-preview.png"}]
+                members: [{n: "นางสาวนันทพร ทวงษ์ศรี", img: "https://i.postimg.cc/XYL6JpRm/mi-m-ch-x-338-20260209083258.png"}, {n: "นางสาวจีรชญา สุโพธิ์"}, {n: "นางสาวฟิณณิตา ทศชา"}, {n: "นางสาวนารีรัตน์ รักษาภักดี"}, {n: "นางสาวทอฝัน สุขรักษา"}, {n: "นางสาวอารีญา ศรีจันทร์", img: "https://i.postimg.cc/GpyHmxtj/mi-m-ch-x-338-20260205082428.png"}]
             },
             {
                 name: "สภาเหรัญญิก", icon: "fa-wallet", head: "นางสาวธัญลักษณ์ อินพิมพ์", 
@@ -216,14 +212,15 @@
             }
         ];
 
+        // Render Logic
         const policyContainer = document.getElementById('policy-list');
         policies.forEach(p => {
-            policyContainer.innerHTML += `<div class="glass p-6 rounded-2xl card-hover transition-all text-left border-l-4 border-transparent hover:border-red-600"><p class="text-gray-300 font-light">${p}</p></div>`;
+            policyContainer.innerHTML += `<div class="glass p-6 rounded-2xl card-hover transition-all text-left border-l-4 border-transparent hover:border-red-600"><p class="text-gray-300 font-light text-sm">${p}</p></div>`;
         });
 
         const deptGrid = document.getElementById('dept-grid');
         depts.forEach((dept, index) => {
-            deptGrid.innerHTML += `<div class="glass p-8 rounded-3xl border-b-4 border-red-600 hover:bg-red-600/10 transition-all text-center group cursor-pointer" onclick="openModal(${index})"><i class="fa-solid ${dept.icon} text-3xl text-red-500 mb-4 group-hover:scale-110 transition-transform"></i><h3 class="text-lg font-bold">${dept.name}</h3><p class="text-xs text-gray-400 mt-2 italic">ดูรายชื่อสมาชิกฝ่าย</p></div>`;
+            deptGrid.innerHTML += `<div class="glass p-8 rounded-3xl border-b-4 border-red-600 hover:bg-red-600/10 transition-all text-center group cursor-pointer" onclick="openModal(${index})"><i class="fa-solid ${dept.icon} text-3xl text-red-500 mb-4 group-hover:scale-110 transition-transform"></i><h3 class="text-lg font-bold text-white">${dept.name}</h3><p class="text-[10px] text-gray-500 mt-2 uppercase tracking-widest">คลิกดูรายชื่อ</p></div>`;
         });
 
         const modal = document.getElementById("memberModal");
@@ -244,14 +241,13 @@
                         <p class="font-800 text-lg">${dept.head}</p>
                     </div>
                 </div>
-                <p class="text-gray-500 uppercase tracking-widest text-[10px] font-bold mb-6">สมาชิกในฝ่าย</p>
                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-6">
                     ${dept.members.map(m => `
                         <div class="text-center">
                             <div class="member-img-placeholder w-12 h-12 mb-2 border-gray-600">
                                 ${m.img ? `<img src="${m.img}">` : `<i class="fa-solid fa-user text-xl text-gray-600"></i>`}
                             </div>
-                            <p class="text-xs font-light">${m.n}</p>
+                            <p class="text-[11px] font-light text-gray-300 leading-tight">${m.n}</p>
                         </div>
                     `).join('')}
                 </div>
